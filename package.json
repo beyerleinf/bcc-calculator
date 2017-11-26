@@ -6,8 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --aot",
-    "test": "ng test",
-    "codecov": "codecov -f coverage/coverage-final.json",
+    "test": "ng test -cc",
+    "codecov": "codecov -f coverage/*.json",
     "tslint": "node_modules/.bin/tslint --type-check --project ./",
     "e2e": "ng e2e",
     "doc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs"
@@ -52,6 +52,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
-    "typescript": "^2.4.2"
+    "typescript": "2.4.2"
   }
 }
