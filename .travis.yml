@@ -5,7 +5,6 @@ os:
   - linux
 language: node_js
 node_js:
-  - '4'
   - '6'
   - '7'
   - '8'
@@ -21,7 +20,7 @@ script:
   - npm run test
 after_success:
   - npm run codecov
-  - curl $FTP_USER:$FTP_PASS ftp.strato.de -Q "dist"
+  - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "dist"
   - curl -T dist/* -u $FTP_USER:$FTP_PASS ftp.strato.de/dist
 env:
   global:

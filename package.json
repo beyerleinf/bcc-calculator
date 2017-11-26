@@ -7,7 +7,7 @@
     "start": "ng serve",
     "build": "ng build --prod --aot",
     "test": "ng test",
-    "codecov": "codecov -f coverage/*.json",
+    "codecov": "codecov -f coverage/coverage-final.json",
     "tslint": "node_modules/.bin/tslint --type-check --project ./",
     "e2e": "ng e2e",
     "doc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs"
