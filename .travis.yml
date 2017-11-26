@@ -1,11 +1,12 @@
 os:
   - linux
+  - windows
 language: node_js
 node_js:
-  - "4"
-  - "6"
-  - "7"
-  - "8"
+  - '4'
+  - '6'
+  - '7'
+  - '8'
 install:
   - npm install
 script:
@@ -15,3 +16,8 @@ script:
   - npm run test
 after_success:
   - npm run codecov
+  - curl -T dist/* -u $FTP_USER:$FTP_PASS ftp.strato.de/bcc/dist
+env:
+  global:
+  - secure: ihXkqayPx14Euxfk6SJiYwaKbwRPuoqNMQX7dRqRi6fQa0hAruAxLMyR8xt8FaZksCA4Klw53U0cs6ME+CJPEDllCvQhGfTzDvDamLD/GVoq+gHhG/KdhINMD62LZjjLiieS280JJQ0K4oOfUaTMQlqbeLTsAhG6c2bkQk9IvIDMwGJoLkuvY1T6FnVoUnYJYmKrJrP/thHQdtjCzTY0pphbSMiqR1JTU5yXtfaqPByN2YLjpPUU7n0jmUTQTiHmxKcIR5krz7BY3hGwjP+Vl7aUuN7XuiWb60TqdnQLa9Af/RxsHbqTJNqxBrI852UkbpX8XmMoQ8Yr7DLTz3MlDrDwTcaOLNAx82H4eY9GMi9oShP3upBF04Xz0FHZ3x2XFgJnBAaxww1MzElRV89/x1P27TvFwmMcmxOGfR0Zinax468jHpf2+lNfs54JQYGhcEIC48+qSVB7ivHrS/zxRzaeHl5q3iuA4hXgOYhLrOkQrmAzYhlDkEmuDlSYAEmV+7jwTlkxM6CXrJOtJerM5bqnPHVCzAA8cSXzeBQ2yjEuFWGnyPs24lIWwUdtc3gUsK8HOjcHRsKMSevy1Ylkv6i1/JlHMl0sBdLKO1+uUYS7o63ch3wo2LVcQcRX70djxcTyofPd3Le8U9MpUkIMbH7YN7Q7ktua7u2zWkF210Q=
+  - secure: PPos8UyYdZ5Fkpc5IZUe5LATH3WfqXQq2zUTFYOEJ6kevv+8bGFLldKNqJgZLZqp+qqLiB2VeNyOiW3fD79VgUWuU9hQlz99+HSxonSE7x99B/GznlqZ0+2OnELpJtIIAxKlJHX6DbZWSLIMwmBn9cRuW70GquJmnnprl3qUa8ycs+8F2oTpBejaz0Pg6eWfxNygDtFFH4u7XmhAlwGfrKJAHCxw+s/rVAKPUGalnTSNdo9k8iJm6tfoSyZIDMdule3/o490CHFL2COK8OfnjlOrRAsf2ILioCbXE7HxivrVzdx0FmXxXiyL/++3fFlcRQx8xZb3oxmAnvJa6wtqU4+2OeCaQ9gBLbqZfdEWM9yxGftSNyR6+YZlwqxQDV5w+14WeoGlJg9KMhIh7DpZD5vd4iSk9a+hi1KbDO2DAIGGrGhAFe6iLh50YR36Nmszjdj/tlqRlZZ0dzUn5q026BtvC9DpLucmakHMPxGXFP28qX8Bpl2L+77WWaAeYd/eZoCYiNwWGfKiTlPfp0S+IEJ4H6C5CvxPZLqZ9QsfO77F4efEHEL5GsWs/gqwCR8CB4sgBZLiJk/xHGAa0+ooKlzKKV5YyU1uie1A1M2zNPl4LZwXiV1XXXo31ewPRMdn9h+GWbVq5zM1cug3enaTFTp3naq1pLf+N8Avd1C6z1U=

@@ -30,7 +30,7 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular-devkit/schematics": "0.0.34",
+    "@angular-devkit/schematics": "0.0.37",
     "@angular/cli": "^1.5.4",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
@@ -46,6 +46,7 @@
     "karma-chrome-launcher": "~2.1.1",
     "karma-cli": "~1.0.1",
     "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-firefox-launcher": "^1.0.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
