@@ -1,4 +1,4 @@
-# Block Check Chracter Calculator
+# Block Check Character Calculator
 
 [![Build Status](https://travis-ci.org/beyerleinf/bcc-calculator.svg?branch=master)](https://travis-ci.org/beyerleinf/bcc-calculator)
 [![codecov](https://codecov.io/gh/beyerleinf/bcc-calculator/branch/master/graph/badge.svg)](https://codecov.io/gh/beyerleinf/bcc-calculator)

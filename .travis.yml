@@ -20,6 +20,11 @@ script:
   - npm run test
 after_success:
   - npm run codecov
+  - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "DELE dist/*.*"
+  - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "DELE dist/*.js"
+  - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "DELE dist/*.html"
+  - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "DELE dist/*.css"
+  - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "DELE dist/*.ico"
   - curl -u $FTP_USER:$FTP_PASS ftp.strato.de -Q "RMD dist"
   - curl -T dist/* -u $FTP_USER:$FTP_PASS ftp.strato.de/dist
 env:
