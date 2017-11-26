@@ -3,7 +3,6 @@ addons:
   chrome: stable
 os:
   - linux
-  - windows
 language: node_js
 node_js:
   - '4'
@@ -22,7 +21,8 @@ script:
   - npm run test
 after_success:
   - npm run codecov
-  - curl -T dist/* -u $FTP_USER:$FTP_PASS ftp.strato.de/bcc/dist
+  - curl $FTP_USER:$FTP_PASS ftp.strato.de -Q "dist"
+  - curl -T dist/* -u $FTP_USER:$FTP_PASS ftp.strato.de/dist
 env:
   global:
   - secure: ihXkqayPx14Euxfk6SJiYwaKbwRPuoqNMQX7dRqRi6fQa0hAruAxLMyR8xt8FaZksCA4Klw53U0cs6ME+CJPEDllCvQhGfTzDvDamLD/GVoq+gHhG/KdhINMD62LZjjLiieS280JJQ0K4oOfUaTMQlqbeLTsAhG6c2bkQk9IvIDMwGJoLkuvY1T6FnVoUnYJYmKrJrP/thHQdtjCzTY0pphbSMiqR1JTU5yXtfaqPByN2YLjpPUU7n0jmUTQTiHmxKcIR5krz7BY3hGwjP+Vl7aUuN7XuiWb60TqdnQLa9Af/RxsHbqTJNqxBrI852UkbpX8XmMoQ8Yr7DLTz3MlDrDwTcaOLNAx82H4eY9GMi9oShP3upBF04Xz0FHZ3x2XFgJnBAaxww1MzElRV89/x1P27TvFwmMcmxOGfR0Zinax468jHpf2+lNfs54JQYGhcEIC48+qSVB7ivHrS/zxRzaeHl5q3iuA4hXgOYhLrOkQrmAzYhlDkEmuDlSYAEmV+7jwTlkxM6CXrJOtJerM5bqnPHVCzAA8cSXzeBQ2yjEuFWGnyPs24lIWwUdtc3gUsK8HOjcHRsKMSevy1Ylkv6i1/JlHMl0sBdLKO1+uUYS7o63ch3wo2LVcQcRX70djxcTyofPd3Le8U9MpUkIMbH7YN7Q7ktua7u2zWkF210Q=
