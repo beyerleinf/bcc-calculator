@@ -10,8 +10,8 @@ node_js:
   - '7'
   - '8'
 before_install:
-  - apt update -qq
-  - apt install lftp -qq
+  - sudo apt update -qq
+  - sudo apt install lftp -qq
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 install:
