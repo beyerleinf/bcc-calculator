@@ -5,10 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --aot",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "codecov": "codecov -f coverage/*.json",
+    "tslint": "node_modules/.bin/tslint --type-check --project ./",
+    "e2e": "ng e2e",
+    "doc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs"
   },
   "private": true,
   "dependencies": {
@@ -28,13 +30,16 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.1",
+    "@angular-devkit/schematics": "0.0.34",
+    "@angular/cli": "^1.5.4",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
+    "@compodoc/compodoc": "^1.0.4",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
-    "codelyzer": "~3.1.1",
+    "codecov": "^3.0.0",
+    "codelyzer": "^4.0.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",

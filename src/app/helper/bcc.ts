@@ -1,5 +1,3 @@
-import {BccResult} from '../models/bcc-result';
-
 import {Hex} from './hex';
 import {ObjectHelper} from './object-helper';
 
