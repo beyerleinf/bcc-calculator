@@ -1,4 +1,6 @@
-# Bcc
+# Block Check Chracter Calculator
+
+[![Build Status](https://travis-ci.org/beyerleinf/bcc-calculator.svg?branch=master)](https://travis-ci.org/beyerleinf/bcc-calculator)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
