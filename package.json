@@ -1,6 +1,11 @@
 {
-  "name": "bcc",
-  "version": "0.0.0",
+  "name": "bcc-calculator",
+  "description": "Simple Block Check Character calculator",
+  "homepage": "http://bcc.fabian-b.de/",
+  "bugs": {
+    "url": "https://github.com/beyerleinf/bcc-calculator/issues"
+  },
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
