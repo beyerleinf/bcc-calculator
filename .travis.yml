@@ -3,26 +3,26 @@ addons:
   firefox: latest
   chrome: stable
 os:
-  - linux
+- linux
 language: node_js
 node_js:
-  - '6'
-  - '7'
-  - '8'
+- '6'
+- '7'
+- '8'
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 install:
-  - npm install
+- npm install
 script:
-  - npm run tslint
-  - npm run doc
-  - npm run build
-  - npm run test
+- npm run tslint
+- npm run doc
+- npm run build
+- npm run test
 after_success:
-  - npm run codecov
-  - ftp -n < ftp.sh
+- npm run codecov
+- ftp -n < ftp.sh
 env:
   global:
-  - secure: ihXkqayPx14Euxfk6SJiYwaKbwRPuoqNMQX7dRqRi6fQa0hAruAxLMyR8xt8FaZksCA4Klw53U0cs6ME+CJPEDllCvQhGfTzDvDamLD/GVoq+gHhG/KdhINMD62LZjjLiieS280JJQ0K4oOfUaTMQlqbeLTsAhG6c2bkQk9IvIDMwGJoLkuvY1T6FnVoUnYJYmKrJrP/thHQdtjCzTY0pphbSMiqR1JTU5yXtfaqPByN2YLjpPUU7n0jmUTQTiHmxKcIR5krz7BY3hGwjP+Vl7aUuN7XuiWb60TqdnQLa9Af/RxsHbqTJNqxBrI852UkbpX8XmMoQ8Yr7DLTz3MlDrDwTcaOLNAx82H4eY9GMi9oShP3upBF04Xz0FHZ3x2XFgJnBAaxww1MzElRV89/x1P27TvFwmMcmxOGfR0Zinax468jHpf2+lNfs54JQYGhcEIC48+qSVB7ivHrS/zxRzaeHl5q3iuA4hXgOYhLrOkQrmAzYhlDkEmuDlSYAEmV+7jwTlkxM6CXrJOtJerM5bqnPHVCzAA8cSXzeBQ2yjEuFWGnyPs24lIWwUdtc3gUsK8HOjcHRsKMSevy1Ylkv6i1/JlHMl0sBdLKO1+uUYS7o63ch3wo2LVcQcRX70djxcTyofPd3Le8U9MpUkIMbH7YN7Q7ktua7u2zWkF210Q=
-  - secure: PPos8UyYdZ5Fkpc5IZUe5LATH3WfqXQq2zUTFYOEJ6kevv+8bGFLldKNqJgZLZqp+qqLiB2VeNyOiW3fD79VgUWuU9hQlz99+HSxonSE7x99B/GznlqZ0+2OnELpJtIIAxKlJHX6DbZWSLIMwmBn9cRuW70GquJmnnprl3qUa8ycs+8F2oTpBejaz0Pg6eWfxNygDtFFH4u7XmhAlwGfrKJAHCxw+s/rVAKPUGalnTSNdo9k8iJm6tfoSyZIDMdule3/o490CHFL2COK8OfnjlOrRAsf2ILioCbXE7HxivrVzdx0FmXxXiyL/++3fFlcRQx8xZb3oxmAnvJa6wtqU4+2OeCaQ9gBLbqZfdEWM9yxGftSNyR6+YZlwqxQDV5w+14WeoGlJg9KMhIh7DpZD5vd4iSk9a+hi1KbDO2DAIGGrGhAFe6iLh50YR36Nmszjdj/tlqRlZZ0dzUn5q026BtvC9DpLucmakHMPxGXFP28qX8Bpl2L+77WWaAeYd/eZoCYiNwWGfKiTlPfp0S+IEJ4H6C5CvxPZLqZ9QsfO77F4efEHEL5GsWs/gqwCR8CB4sgBZLiJk/xHGAa0+ooKlzKKV5YyU1uie1A1M2zNPl4LZwXiV1XXXo31ewPRMdn9h+GWbVq5zM1cug3enaTFTp3naq1pLf+N8Avd1C6z1U=
+  - secure: PYqE5k2gedwCJ5iuoUcBLFmJhXYteZfEcmBGaZn44FRwbX0ln+ZpbP5aNcJySAM1WcfROpiOvA5fKh9ea9jB3rNBgx9t6fbDCuqT602jxXpHZalGxVpjRChIEP6I5+NBkfhpc18bb+qtZ7uBCOFasHgDtRtV8mMo0e31G1U0VYQH9x5EgGgUEy1gN1p7wTyFPT0jWINDUS4jbnSv/HVquoz/HIvrOAIEaAYWPSQ0Ecm0HD3IC4ez59C/lajxb55xbyQANnt+WsG1Q1mwg5UkfAW87wjP1KX2GsCD/75mVEeVghojqGEvG+pIAz3VJyuHwHBJzfurEPWrGiIGLg41ecXkrCi3ykNnY7qzcm5B4Yaf4l5fXDYh+G5JDUg4sIKUjKbXq/bojQJk5ymt1NEz5qllsXpa2vkBva6ExuSWXnppGgN45TnKU35PwQG+7PnsURtG5C63xN9oKi7z+RH3RKU2sSYbQQjHE0/bwIQ2CfQTZrCT1jc9S4RPlUzyzSMEXzAQqw8xg2jwqfZtjychEssXOa+1kQjSdxldtfy4cPEY7P3MPE/X/1S1TCE+1l6bnJckn1p+2ThAuNgfZiDDK61q9hR+k15VtaoSknIS29wPP/IeyEa2+RcTlq2DJtVVFck/0dJXKzyYbn0wU+WNehlzY18jmxnlbR4XDXiIByY=
+  - secure: SGYJALABP9/ulSNggyrkKyZwDChory1dozaw4a1I8Aj9ZFRkWSrEByVkjiZp/5mERk66UczaadWaLVrJ7+ZeRvteqTIJ1X1Zvw56fRywqsaEjxBKd08BumuKK7X34zX3J4Q5rDBU6cohGcGnqlAvbPB4ZhLTQSMu6QNx1ZZp3m7ogRkfhKuSUDsCE3hqkIA02Any0JaQQGn48VrZKOX4BX04raI8GTZB19NAf1wit7CPnBLY26jVZsDPpBKEDcWZvmsQXEObzPe+cS/HbFY7F6yl4tJFro9N7vYnJTQ4dyniB9AKXHfhGi5FiT476Ywk1Z9UOTEOv7YO9OW4y0a4Qwh3qH3haa+Iqb6cULYNraCG0co8jS8uFZatuNhGgtUS0U6ls6r/SQjmaO8uo/K1v3mQnfOdM8J8ePLkPa83JZhmcil6xAcN8ahI1z2zIAoKLDGIk5aKuwDT6P6kqHdihWXXuuG+ElefBPxELabaNYYdeD/gaoHHl76tlsJSdXXLK5HJFODMhYVVRHmUpBt2sUWmFnbYhwCZAZAMjoaAhN3H3ys8bFZ+U6vzGJ4t3OslF6tXnKJwMp2nZReuvKJeGgHCwifgzGSD+sv0cd8hd/7LqZjhAlXtYE2EOz2TX+TWP7RwJratO2RJF/aiJ1k4gvN94ulvMCQxbQoQV5WlH3Q=
