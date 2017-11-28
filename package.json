@@ -8,7 +8,7 @@
     "build": "ng build --prod --aot",
     "test": "ng test -cc",
     "codecov": "codecov -f coverage/*.json",
-    "tslint": "node_modules/.bin/tslint --type-check --project ./",
+    "tslint": "node_modules/.bin/tslint --project ./",
     "e2e": "ng e2e",
     "doc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs"
   },

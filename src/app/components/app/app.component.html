@@ -27,7 +27,9 @@
         <input type="text" readonly class="form-control" value="{{bccVal}}" placeholder="Calculated Block Check Character" aria-describedby="hex-addon">
       </div>
       <br>
-      <p>Binary representation: </p><code>{{bccBinary}}</code>
+      <div *ngIf="bccBinary">
+        <p>Binary representation: </p><code>{{bccBinary}}</code>
+      </div>
     </div>
   </div>
 
