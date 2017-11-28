@@ -10,6 +10,7 @@ node_js:
 - '7'
 - '8'
 before_install:
+- sudo apt install ncftp
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 install:
@@ -21,7 +22,7 @@ script:
 - npm run test
 after_success:
 - npm run codecov
-- ftp -n < ftp.sh
+- ncftpput -R -v -u $FTP_USER -p $FTP_PASS ftp.strato.de dist dist/*
 env:
   global:
   - secure: PYqE5k2gedwCJ5iuoUcBLFmJhXYteZfEcmBGaZn44FRwbX0ln+ZpbP5aNcJySAM1WcfROpiOvA5fKh9ea9jB3rNBgx9t6fbDCuqT602jxXpHZalGxVpjRChIEP6I5+NBkfhpc18bb+qtZ7uBCOFasHgDtRtV8mMo0e31G1U0VYQH9x5EgGgUEy1gN1p7wTyFPT0jWINDUS4jbnSv/HVquoz/HIvrOAIEaAYWPSQ0Ecm0HD3IC4ez59C/lajxb55xbyQANnt+WsG1Q1mwg5UkfAW87wjP1KX2GsCD/75mVEeVghojqGEvG+pIAz3VJyuHwHBJzfurEPWrGiIGLg41ecXkrCi3ykNnY7qzcm5B4Yaf4l5fXDYh+G5JDUg4sIKUjKbXq/bojQJk5ymt1NEz5qllsXpa2vkBva6ExuSWXnppGgN45TnKU35PwQG+7PnsURtG5C63xN9oKi7z+RH3RKU2sSYbQQjHE0/bwIQ2CfQTZrCT1jc9S4RPlUzyzSMEXzAQqw8xg2jwqfZtjychEssXOa+1kQjSdxldtfy4cPEY7P3MPE/X/1S1TCE+1l6bnJckn1p+2ThAuNgfZiDDK61q9hR+k15VtaoSknIS29wPP/IeyEa2+RcTlq2DJtVVFck/0dJXKzyYbn0wU+WNehlzY18jmxnlbR4XDXiIByY=
