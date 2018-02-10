@@ -1,13 +1,60 @@
 import {Component} from '@angular/core';
 import {Bcc, Hex, ObjectHelper} from '../../helper';
 
+/**
+ * The main component of the app.
+ *
+ * @export
+ * @class AppComponent
+ */
 @Component({selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css']})
 export class AppComponent {
+  /**
+   * THe {@link Bcc} helper class instance.
+   *
+   * @type {Bcc}
+   * @memberof AppComponent
+   */
   bcc: Bcc;
+
+  /**
+   * The {@link Hex} helper class instance.
+   *
+   * @type {Hex}
+   * @memberof AppComponent
+   */
   hex: Hex;
+
+  /**
+   * The HEX string input.
+   *
+   * @type {string}
+   * @memberof AppComponent
+   */
   hexString: string;
+
+  /**
+   * The calculated BCC value for the HEX input.
+   *
+   * @type {string}
+   * @memberof AppComponent
+   */
   bccVal: string;
+
+  /**
+   * The binary repressentation of the BCC result.
+   *
+   * @type {string}
+   * @memberof AppComponent
+   */
   bccBinary: string;
+
+  /**
+   * The error string displayed in the HTML template.,
+   *
+   * @type {string}
+   * @memberof AppComponent
+   */
   error: string;
 
   /**

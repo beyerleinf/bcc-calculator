@@ -1,3 +1,6 @@
+<span class="pull-right">
+  <a href="https://github.com/beyerleinf/bcc-calculator" target="_blank">Issues? Find me on GitHub</a>
+</span>
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
@@ -28,7 +31,8 @@
       </div>
       <br>
       <div *ngIf="bccBinary">
-        <p>Binary representation: </p><code>{{bccBinary}}</code>
+        <p>Binary representation: </p>
+        <code>{{bccBinary}}</code>
       </div>
     </div>
   </div>
@@ -36,10 +40,13 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <h1>How is it calculated?</h1>
-      <p>The <strong>Block Check Character</strong> is calculated by XORing each byte with the result of previous XOR.</p>
+      <p>The
+        <strong>Block Check Character</strong> is calculated by XORing each byte with the result of previous XOR.</p>
 
       <h2>Example</h2>
-      <p>In this example we will calculate the Block Check Chracter of the message<br><code>A4 37 F6 F8 CD</code>.</p>
+      <p>In this example we will calculate the Block Check Chracter of the message
+        <br>
+        <code>A4 37 F6 F8 CD</code>.</p>
 
       <h3>Binary representations of each byte</h3>
       <pre>A4: 1010 0100<br>37: 0011 0111<br>F6: 1111 0110<br>F8: 1111 1000<br>CD: 1100 1101</pre>
@@ -60,7 +67,8 @@
       <pre>1001 1101     9D<br>1100 1101     CD<br>---------<br>0101 0000     50</pre>
 
       <h4>Result</h4>
-      The result of the calculation will be the result of the last XOR<br>
+      The result of the calculation will be the result of the last XOR
+      <br>
       <code>50</code>
     </div>
   </div>

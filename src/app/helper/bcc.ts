@@ -8,6 +8,12 @@ import {ObjectHelper} from './object-helper';
  * @class Bcc
  */
 export class Bcc {
+  /**
+   * The {@link Hex} helper class instance.
+   *
+   * @type {Hex}
+   * @memberof Bcc
+   */
   hex: Hex;
 
   /**
