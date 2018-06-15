@@ -13,9 +13,9 @@
     "build": "ng build --prod --aot",
     "test": "ng test --code-coverage",
     "codecov": "codecov -f coverage/*.json",
-    "tslint": "node_modules/.bin/tslint --project ./",
+    "tslint": "tslint --project ./tsconfig.json",
     "e2e": "ng e2e",
-    "doc": "./node_modules/.bin/compodoc -p tsconfig.json -d docs"
+    "doc": "compodoc -p tsconfig.json -d docs"
   },
   "private": true,
   "dependencies": {
