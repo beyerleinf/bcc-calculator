@@ -42,7 +42,7 @@ export class AppComponent {
   bccVal: string;
 
   /**
-   * The binary repressentation of the BCC result.
+   * The binary representation of the BCC result.
    *
    * @type {string}
    * @memberof AppComponent
