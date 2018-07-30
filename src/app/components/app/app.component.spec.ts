@@ -1,7 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
-import {Ascii, Bcc, Hex} from 'node-bcc';
 
 import {TutorialComponent} from '../tutorial/tutorial.component';
 
