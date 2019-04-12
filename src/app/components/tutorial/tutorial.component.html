@@ -1,0 +1,32 @@
+<h1>
+  How is it calculated?</h1>
+<p>The
+  <strong>Block Check Character</strong> is calculated by XOR-ing each byte with the result of previous XOR.</p>
+
+<h2>Example</h2>
+<p>In this example we will calculate the Block Check Character of the message
+  <br>
+  <code>A4 37 F6 F8 CD</code>.</p>
+
+<h3>Binary representations of each byte</h3>
+<pre>A4: 1010 0100<br>37: 0011 0111<br>F6: 1111 0110<br>F8: 1111 1000<br>CD: 1100 1101</pre>
+
+<h4>First XOR (Start with 0)</h4>
+<pre>0000 0000      0<br>1010 0100     A4<br>---------<br>1010 0100     A4</pre>
+
+<h4>Second XOR</h4>
+<pre>1010 0100     A4<br>0011 0111     37<br>---------<br>1001 0011     93</pre>
+
+<h4>Third XOR</h4>
+<pre>1001 0011     93<br>1111 0110     F6<br>---------<br>0110 0101     65</pre>
+
+<h4>Fourth XOR</h4>
+<pre>0110 0101     65<br>1111 1000     F8<br>---------<br>1001 1101     9D</pre>
+
+<h4>Fifth XOR</h4>
+<pre>1001 1101     9D<br>1100 1101     CD<br>---------<br>0101 0000     50</pre>
+
+<h4>Result</h4>
+The result of the calculation will be the result of the last XOR
+<br>
+<code>50</code>
