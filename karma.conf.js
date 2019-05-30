@@ -16,7 +16,7 @@ module.exports = function(config) {
       require('karma-average-spec-time-reporter'),
     ],
     client: {
-      clearContext: false  // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, 'coverage'),
@@ -39,19 +39,12 @@ module.exports = function(config) {
       max: 500,
       warn: 250,
     },
-    reporters: [
-      'spec',
-      'kjhtml',
-      'spec-time',
-    ],
+    reporters: ['spec', 'kjhtml', 'spec-time'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: [
-      'Chrome',
-      'Firefox',
-    ],
-    singleRun: true
+    browsers: ['Chrome', 'Firefox'],
+    singleRun: true,
   });
 };
