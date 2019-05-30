@@ -4,25 +4,25 @@ addons:
   chrome: stable
   apt:
     packages:
-    - ncftp
+      - ncftp
 os:
-- linux
+  - linux
 language: node_js
 node_js:
-- '8'
+  - '8'
 before_install:
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 install:
-- npm install
+  - npm install
 script:
-- npm run tslint
-- npm run build
-- npm run test
+  - npm run lint
+  - npm run build
+  - npm run test
 after_success:
-- npm run codecov
-- ncftpput -R -v -u $FTP_USER -p $FTP_PASS ftp.strato.de dist dist/*
+  - npm run codecov
+  - ncftpput -R -v -u $FTP_USER -p $FTP_PASS bcc.beyerleinf.de dist dist/*
 env:
   global:
-  - secure: JDjjLSSbZlO3DK8CnNWqha/+DkeHpq//bTzLAEucNj7teNwsBrtI2KSgIDBqR/7t5Rm5tH6079HElDSUSUBXnV+mWb9zhFQgQsX8tpVoxuCbYpmpvO2Kf7aJbgkSrb6voUJHs7asS5LXKzHZdTHLYwBUCBUbozuDLZL3HTE5qD8bdA+DkLx2LivsJM58Poih0dlYnNlgNd4m08ADdGQ9WW/XVRaJtL2tjMpLB1g5MvGJdm0ClEkQT0kCjnfAlY55WRL/OeEHnYgZv0w1RHs5aJ40ePl8nMBk8a9Z2Seay5itInsXu5czpIMruZzRZk8tYUpNwuOu4YegXypehZIaHBsM5Kjfev+ZabW3ytiPWm7A2pAhP5GJAFuk7Qm7YECLWjVnjjBxg0xxsEY0cg/z3oc15tXdgJ5MnOcPSJqZ/V377VCyhFI2nVUPxHBcEfE7/l5v7jTqgABKvmrUhbBKYX+hpRJk26vk37PVQt/S5CxNfXo2G+0n+oJUnt9zf+Iw6rbbaSnKGsRXK8szRAqDtNrIt44udGOw1xEVVTo7Pnlp9DrPKKNO4KeVU9c6o68cOn7fHThLa5uSlGDN4ATMPpWwfimioly/5MMjkYe5UZeyPVAnKID16VjYmwYwnZDLrmmIoKGTgIkr25MhF1j7L5BbK5YleWBcq4ZYZaeQlXM=
-  - secure: ePrhDD6xm9g7IMqxjJ4IUqX+q55Gve9YkyTWZISbCFlWTghOzR1TsVCFRrpFFQ3U1fN8xnLm6w66Ns6KovkuKfX+NchkK8Tz3Dr1yEEnMfO9Ew48NfIy/WY9wGGdwLl8brqJZziixzSN8nU5aBwoYnJxs61yXl6T1zBRLqX2NgZ7WxmoygHRfQ0WNMdyuo5tDXmwVNKvsuAQZOpVcBxN9phqw9QLLilB79/IfRzTlfRLb2R0mk9igABLU2u5WXLpPPSbl1zAVhJj16wM2LmhuRrbdXYEpRHzso8agLnom9GTVSMEvg/tgZRvMlCjLJ2dZxuQ05h4FfWosRp+MbefALR4wNhdcxdIz1bzU28eqH+sBHlw6PEoenCRyYQgELTa//4LVwINwxULQaNfhBuKw4jIrzRCig0slxtedN/qh5dldI8sB7XQrezZVdl5+KZ5ir5q8zoAlSDjvXA9cMaDb2yxuRkZX8LnvAw+hyRz3gE41T7Q8XhYTOtr3rnjU4/ERvKVdBQT6DGjvi66y4kMVJaOyhmCBA8FT0ZHAMI7NBo3ABfXg2QzbA2uaAqD3voHFq7jnX7YdsXj8CWykBHO86fbhu//Yrqz1zWpdoz5kEdoKkW/3HV4inudwXrvWjmZtIA3p4rd7e9OxHWExblUDRo09CPBvwN42DH7EBMpLZM=
+    - secure: NoXaKE2Zxtd/iBhSC5GijAsp5XqxoW6XuoFsAxCxgq8/BmIE9Q1TxwsQ+dYKq40MiYJnqkqu7bFVlCOF2FRN9MIaXm4mzKcg1KrCK8CIyDTg9NwVFKAcUGSDwzInBLUxJqwXh22JEbKnatYZh87mEd0vAXG+L41IVxQIi5aann0JQCx+uJdIO6wWTnN+KE0F++7T589K2CC+z+mMZ5LfJNSEssPQTUIh3T61BwVscPtLQgQsbN/6TeUNUMVUEpijFXXtjRnwtBiBt7BGGf3O2PoDeNjfY6MFpQo94NRajylaFSYoJHsSk/PyZ/GsDHxY0L/+quk1GzMqq6DdUYzs0GULioHAPHLpYZ+pNEwHT6MW5gL2kET+VCjxvHjSqVrKeDt5v3gujWITLz+kpAOn5v3AST0nsR/TDp0tl3dHZoVIbMCIXthyqJjD0SC7YAxP3/53RiskLiVgRMTM1bjFXBf8Y3qO6yUp3dm7/DedYI78av8tpfsjCMSex6/UWl/wv3b/fnW/Hyd3ivYGMlDWeZudk0Omp0Enko9smGOPWcS+SXPI3I8hVCa9/5PzPtSFjJxhlHyVK/iYRnZSWA8FyuyV2HwFt67A5GBjUItf4X7lajtL+h0Hsje67n10pccR22mMDT18xbG6ba4wemFjvAl2hPWiP2Gem9DDU07a4Cg=
+    - secure: c/QHFl0Uk1dG8Bwip8fi5pMeEkyXEXOMvShfipkqnt8cTegoRgZhQ6wWJEJRT0kldUmTUS0Mhro4CfsDqZoEJOgukzahTVkiTvCSG4jbBvYy41vMuSBhuvSfN3JV+rKYXj/MMJvUYZnFQg1lTMbdFey0oN9Qa7tbu52nJblBfO8GxD4afS0p4k5SeeVem1GABGwfEhHgVTSISIVbCE34Hs1MMyivx/crovdNFC+H2T1Ji66igTDLO0cBSLYwGjmDvTVK4sLzFpkUAf7t/qYlhyxDddyL61pw23O3hEcMvjx4adjLm0n73yv1jQYbRMo1HbuJW6W1pHG+v6Sv2BbR0SWg094/FA4+oJDziW/Hp8cz+OlvIZ6x2YDro71NwdoAwtq2RBfL8/LYAz+Fnq67qnkVJ/aitgDzUJgTo5hmjkdEowWKwK7+2oSf2OJwlUcHw/bVmoc7ygIit544Mf70c8f3WANtCGXUCA1gietCMH+S7IoBXqG+hKDQiXWhU7HzXFRuNeb6rcE7qfjx9VYc0uAXrj2+3z7TzSW1mV7naCIdPH9MPK9M9Dq6pcpfXqcVOHLeUnpnGeDBmD4nqjTTAAqVxK+jxM74wL3SqOH+4UxRv8tzOjTpHh3OWTIPt0eVjmQ8HCVGAkI4nVfZxvEqjnnOBL/FORo8voawKQOP6WY=
