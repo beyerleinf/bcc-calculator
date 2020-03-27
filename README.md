@@ -7,7 +7,7 @@
 [![GitHub commit activity the past week, 4 weeks, year](https://img.shields.io/github/commit-activity/y/beyerleinf/bcc-calculator.svg)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/beyerleinf/bcc-calculator.svg)]()
 [![license](https://img.shields.io/github/license/beyerleinf/bcc-calculator.svg)]()
-[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bcc.fabian-b.de)](http://bcc.fabian-b.de/) [![Greenkeeper badge](https://badges.greenkeeper.io/beyerleinf/bcc-calculator.svg)](https://greenkeeper.io/)
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bcc.fabian-b.de)](http://bcc.fabian-b.de/) 
 
 A simple Block Check Character calculator.
 
