@@ -30,8 +30,8 @@
     "@angular/router": "^8.2.14",
     "core-js": "^2.5.7",
     "node-bcc": "^2.3.0",
-    "rxjs": "^6.5.4",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.10.3",
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.5",
