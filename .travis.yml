@@ -8,7 +8,7 @@ os:
   - linux
 language: node_js
 node_js:
-  - "12"
+  - '12'
 install:
   - npm install
 script:
@@ -18,7 +18,7 @@ script:
 after_success:
   - npm run codecov
   #  - ncftpput -R -v -u $FTP_USER -p $FTP_PASS bcc.beyerleinf.de dist dist/*
-  - find ./dist -type f -exec curl -u $FTP_USER:$FTP_PASS --ftp-create-dirs -T {} ftp://bcc.beyerleinf.de/{} \;
+  # - find ./dist -type f -exec curl -u $FTP_USER:$FTP_PASS --ftp-create-dirs -T {} ftp://bcc.beyerleinf.de/{} \;
 env:
   global:
     - secure: oDGc6jllgx891xBPwvYIg3KXwV8p8H+3nhVMSbpgg5CNqJGhS0ldkcpCw2g69gC16Rmugg+535f+NIfSEynMryMKXESdqBDeln1yJEiYbets342qpCD9/x8kNPf6NVTUfohdHu/0kn3hZJe2G7lnrNImMuxR3VtITM4aaVO3bfbjiI5xguNMJl8zhDTSuZL1MhadAe5AHuZcqx7pLWHs6Y/zf8EoUqSLCEjFqEVUuHzjZC5959bbMfI3jkufq+KMElJrAK5jE1TgnAZxZYpDFYci7g6KqBogoALKAHHo/0cpJb4a7C0EnLjN/kUxcopKG75HdU5tXm3QIthQUZa/yYbQraBPqAwaRWFNvctBPleleLk6NtUVOrLBEy5cnewpXYpCFkeXrZCX8qZVwdLIhQrYgQoX0HC72kXydF/FbMWz3XPcQUVRx55uowPGwJtNmWP5u/dff0SPziJwrvvGvxolsbf5SywRJyni/90LTUnR8nqYBK93MAhtoLRGjWNLbrACx6d4NfXDDNLPq/eI76V332eDsYZV5gCVKWv6awo3ARIGy99GgG3d+XzKIvryT2UihzT6awZYRPYsBqZ16BTcBU30hIUUKCEcPYwGGDYwqZlim8UVb5gAsc4U1cTXj/QNID8MDYj796k8p9LVUcki55CcAhM3U73IkS8nxHk=
