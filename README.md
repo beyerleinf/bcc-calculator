@@ -7,7 +7,7 @@
 [![GitHub commit activity the past week, 4 weeks, year](https://img.shields.io/github/commit-activity/y/beyerleinf/bcc-calculator.svg)](https://github.com/beyerleinf/bcc-calculator)
 [![GitHub last commit](https://img.shields.io/github/last-commit/beyerleinf/bcc-calculator.svg)](https://github.com/beyerleinf/bcc-calculator)
 [![license](https://img.shields.io/github/license/beyerleinf/bcc-calculator.svg)](https://github.com/beyerleinf/bcc-calculator/blob/master/LICENSE)
-[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bcc.fabian-b.de)](http://bcc.fabian-b.de/)
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=bcc.beyerleinf.de)](http://bcc.fabian-b.de/)
 
 A simple Block Check Character calculator.
 
@@ -20,11 +20,11 @@ To use the tool visit [bcc.beyerleinf.de](https://bcc.beyerleinf.de).
 Found a bug or want to improve the tool? Nice!
 Check out the [Contributing Guidelines](https://github.com/beyerleinf/bcc-calculator/blob/master/CONTRIBUTING.md)!
 
-## Contributors
+<!-- ## Contributors
 
 | [<img alt="beyerleinf" src="https://avatars0.githubusercontent.com/u/12174762?s=460&v=4s=117" width="117">](https://github.com/beyerleinf) |
 | :----------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                [beyerleinf](https://github.com/beyerleinf)                                                 |
+|                                                [beyerleinf](https://github.com/beyerleinf)                                                 | -->
 
 ## License
 
