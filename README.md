@@ -1,6 +1,6 @@
 # Block Check Character Calculator
 
-[![Build Status](https://travis-ci.org/beyerleinf/bcc-calculator.svg?branch=master)](https://travis-ci.org/beyerleinf/bcc-calculator)
+[![Angular Workflow](https://github.com/beyerleinf/bcc-calculator/workflows/Angular%20Workflow/badge.svg?branch=master)](https://github.com/beyerleinf/bcc-calculator/actions?query=workflow%3A%22Angular+Workflow%22)
 [![codecov](https://codecov.io/gh/beyerleinf/bcc-calculator/branch/master/graph/badge.svg)](https://codecov.io/gh/beyerleinf/bcc-calculator)
 [![dependencies Status](https://david-dm.org/beyerleinf/bcc-calculator/status.svg)](https://david-dm.org/beyerleinf/bcc-calculator)
 [![devDependencies Status](https://david-dm.org/beyerleinf/bcc-calculator/dev-status.svg)](https://david-dm.org/beyerleinf/bcc-calculator?type=dev)

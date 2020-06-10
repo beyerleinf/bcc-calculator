@@ -44,7 +44,13 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_ERROR,
     autoWatch: true,
-    browsers: ['ChromeHeadless'],
+    browsers: ['HeadlessChromeNoSandbox'],
+    customLaunchers: {
+      HeadlessChromeNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
+    },
     singleRun: true,
   });
 };
