@@ -92,7 +92,9 @@ describe('AppComponent', () => {
       it('should set correct result', () => {
         const validateSpy = spyOn(Hex, 'validate').withArgs('606162').and.returnValue(true);
         const splitSpy = spyOn(Hex, 'split').withArgs('606162').and.returnValue(['60', '61', '62']);
-        const calulateSpy = spyOn(Bcc, 'calculate').withArgs(['60', '61', '62']).and.returnValue(96);
+        const calulateSpy = spyOn(Bcc, 'calculate')
+          .withArgs(['60', '61', '62'] as any)
+          .and.returnValue(96);
         const toHexStringSpy = spyOn(Hex, 'toHexString').withArgs([96], true).and.returnValue('60');
 
         component.hexString = '60 61 62';
@@ -118,7 +120,9 @@ describe('AppComponent', () => {
       const hexValidateSpy = spyOn(Hex, 'validate').withArgs('606162').and.returnValue(true);
       const asciiToByteArraySpy = spyOn(Ascii, 'asciiToByteArray').withArgs('abc').and.returnValue([97, 98, 99]);
       const splitSpy = spyOn(Hex, 'split').withArgs('606162').and.returnValue(['60', '61', '62']);
-      const calulateSpy = spyOn(Bcc, 'calculate').withArgs(['60', '61', '62']).and.returnValue(96);
+      const calulateSpy = spyOn(Bcc, 'calculate')
+        .withArgs(['60', '61', '62'] as any)
+        .and.returnValue(96);
       const toHexStringSpy = spyOn(Hex, 'toHexString').withArgs([96], true).and.returnValue('60');
 
       component.inputMode = 'asd';
