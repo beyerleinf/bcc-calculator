@@ -16,7 +16,8 @@
     "build:prod": "npm run lint && npm run build:base -- --configuration=production",
     "test": "ng test",
     "codecov": "codecov -f coverage/*.json",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
