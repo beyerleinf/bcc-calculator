@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="alert alert-danger" role="alert" *ngIf="error">
-        <p>{{error}}</p>
+        <p>{{ error }}</p>
       </div>
     </div>
   </div>
@@ -28,7 +28,13 @@
   <div class="row" *ngIf="inputMode === 'ascii'">
     <div class="col-md-12">
       <div class="input-group">
-        <input [(ngModel)]="asciiString" type="text" class="form-control font-mono" placeholder="ASCII String" aria-describedby="btn-addon">
+        <input
+          [(ngModel)]="asciiString"
+          type="text"
+          class="form-control font-mono"
+          placeholder="ASCII String"
+          aria-describedby="btn-addon"
+        />
         <span class="input-group-btn" id="btn-addon">
           <button class="btn btn-default" type="button" (click)="calculate()">Calculate</button>
         </span>
@@ -38,7 +44,13 @@
   <div class="row" *ngIf="inputMode === 'hex'">
     <div class="col-md-12">
       <div class="input-group">
-        <input [(ngModel)]="hexString" type="text" class="form-control font-mono" placeholder="Hexadecimal String" aria-describedby="btn-addon">
+        <input
+          [(ngModel)]="hexString"
+          type="text"
+          class="form-control font-mono"
+          placeholder="Hexadecimal String"
+          aria-describedby="btn-addon"
+        />
         <span class="input-group-btn" id="btn-addon">
           <button class="btn btn-default" type="button" (click)="calculate()">Calculate</button>
         </span>
@@ -51,12 +63,19 @@
         <span class="input-group-addon" id="hex-addon">
           0x
         </span>
-        <input type="text" readonly class="form-control" value="{{bccVal}}" placeholder="Calculated Block Check Character" aria-describedby="hex-addon">
+        <input
+          type="text"
+          readonly
+          class="form-control"
+          value="{{ bccVal }}"
+          placeholder="Calculated Block Check Character"
+          aria-describedby="hex-addon"
+        />
       </div>
-      <br>
+      <br />
       <div *ngIf="bccBinary">
-        <p>Binary representation: </p>
-        <code>{{bccBinary}}</code>
+        <p>Binary representation:</p>
+        <code>{{ bccBinary }}</code>
       </div>
     </div>
   </div>

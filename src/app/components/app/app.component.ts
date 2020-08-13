@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {Ascii, Bcc, Hex} from 'node-bcc';
+import { Component } from '@angular/core';
+import { Ascii, Bcc, Hex } from 'node-bcc';
 
 /**
  * The main component of the app.
@@ -7,7 +7,7 @@ import {Ascii, Bcc, Hex} from 'node-bcc';
  * @export
  * @class AppComponent
  */
-@Component({selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css']})
+@Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css'] })
 export class AppComponent {
   /**
    * The input mode selected by the user. Can be either `ascii` or `hex`.
