@@ -33,7 +33,7 @@
     "core-js": "^2.6.11",
     "node-bcc": "^2.3.0",
     "rxjs": "^6.6.2",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
