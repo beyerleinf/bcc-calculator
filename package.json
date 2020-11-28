@@ -30,7 +30,7 @@
     "@angular/platform-browser-dynamic": "^10.0.9",
     "@angular/platform-server": "^10.0.9",
     "@angular/router": "^10.0.9",
-    "core-js": "^2.6.11",
+    "core-js": "^2.6.12",
     "node-bcc": "^2.3.0",
     "rxjs": "^6.6.2",
     "tslib": "^2.0.0",
