@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/beyerleinf/bcc-calculator/compare/v1.0.0...v1.0.1) (2021-02-13)
+
+
+### Bug Fixes
+
+* upgrade multiple dependencies with Snyk ([e716701](https://github.com/beyerleinf/bcc-calculator/commit/e716701f8abaa2d4bc75c3437f94ec1a65c75beb))
+* upgrade rxjs from 6.5.5 to 6.6.0 ([a7b8cf8](https://github.com/beyerleinf/bcc-calculator/commit/a7b8cf83d6b53fa64ed596c91a18cc77fd60ef86))
+
 ## 1.0.0 (2020-06-10)
 
 
