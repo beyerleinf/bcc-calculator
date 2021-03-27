@@ -31,7 +31,7 @@
     "@angular/platform-server": "^11.2.0",
     "@angular/router": "^11.2.0",
     "core-js": "^2.6.11",
-    "node-bcc": "^2.3.0",
+    "node-bcc": "^2.4.0",
     "rxjs": "^6.6.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
