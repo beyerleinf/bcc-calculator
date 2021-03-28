@@ -11,17 +11,21 @@ module.exports = function (config) {
       require('karma-firefox-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-spec-reporter'),
-      require('karma-coverage-istanbul-reporter'),
+      require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma'),
       require('karma-average-spec-time-reporter'),
     ],
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
-    coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, 'coverage'),
-      reports: ['json', 'html'],
-      fixWebpackSourcePaths: true,
+    preprocessors: {
+      'src/**/*.ts': ['coverage'],
+    },
+    coverageReporter: {
+      dir: 'coverage',
+      subdir: '.',
+      includeAllSources: true,
+      reporters: [{ type: 'cobertura', file: 'cobertura-coverage.xml' }, { type: 'html' }, { type: 'text-summary' }],
     },
     specReporter: {
       maxLogLines: 15,
@@ -39,14 +43,14 @@ module.exports = function (config) {
       max: 500,
       warn: 250,
     },
-    reporters: ['spec', 'kjhtml', 'spec-time'],
+    reporters: ['spec', 'kjhtml', 'spec-time', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_ERROR,
     autoWatch: true,
-    browsers: ['HeadlessChromeNoSandbox'],
+    browsers: ['ChromeNoSandbox'],
     customLaunchers: {
-      HeadlessChromeNoSandbox: {
+      ChromeNoSandbox: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox'],
       },
