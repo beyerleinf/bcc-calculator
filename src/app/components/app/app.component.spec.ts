@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { Ascii, Bcc, Hex } from 'node-bcc';
 import { TutorialComponent } from '../tutorial/tutorial.component';
 import { AppComponent } from './app.component';
-import { Ascii, Hex, Bcc } from 'node-bcc';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -46,7 +46,9 @@ describe('AppComponent', () => {
       it('should set correct result', () => {
         const validateSpy = spyOn(Ascii, 'validate').withArgs('abc').and.returnValue(true);
         const asciiToByteArraySpy = spyOn(Ascii, 'asciiToByteArray').withArgs('abc').and.returnValue([97, 98, 99]);
-        const calulateSpy = spyOn(Bcc, 'calculate').withArgs([97, 98, 99]).and.returnValue(96);
+        const calulateSpy = spyOn(Bcc, 'calculate')
+          .withArgs([97, 98, 99] as any)
+          .and.returnValue(96);
         const toHexStringSpy = spyOn(Hex, 'toHexString').withArgs([96], true).and.returnValue('60');
 
         component.asciiString = 'abc';
