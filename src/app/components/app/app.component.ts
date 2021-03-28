@@ -1,75 +1,19 @@
 import { Component } from '@angular/core';
 import { Ascii, Bcc, Hex } from 'node-bcc';
 
-/**
- * The main component of the app.
- *
- * @export
- * @class AppComponent
- */
 @Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css'] })
 export class AppComponent {
-  /**
-   * The input mode selected by the user. Can be either `ascii` or `hex`.
-   *
-   * @type {string}
-   * @memberof AppComponent
-   */
   inputMode: string;
-
-  /**
-   * The HEX string input.
-   *
-   * @type {string}
-   * @memberof AppComponent
-   */
   hexString: string;
-
-  /**
-   * The ASCII string input.
-   *
-   * @type {string}
-   * @memberof AppComponent
-   */
   asciiString: string;
-
-  /**
-   * The calculated BCC value for the HEX input.
-   *
-   * @type {string}
-   * @memberof AppComponent
-   */
   bccVal: string;
-
-  /**
-   * The binary representation of the BCC result.
-   *
-   * @type {string}
-   * @memberof AppComponent
-   */
   bccBinary: string;
-
-  /**
-   * The error string displayed in the HTML template.,
-   *
-   * @type {string}
-   * @memberof AppComponent
-   */
   error: string;
 
-  /**
-   * Creates an instance of AppComponent.
-   * @memberof AppComponent
-   */
   constructor() {
     this.inputMode = 'ascii';
   }
 
-  /**
-   * Calculates the Block Check Character of the hex value in the input.
-   *
-   * @memberof AppComponent
-   */
   calculate() {
     if (this.inputMode === 'ascii') {
       if (Ascii.validate(this.asciiString)) {
