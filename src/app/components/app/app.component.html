@@ -1,5 +1,7 @@
 <span class="pull-right">
-  <a href="https://github.com/beyerleinf/bcc-calculator" target="_blank">Issues? Find me on GitHub</a>
+  <a class="github-link" href="https://github.com/beyerleinf/bcc-calculator" target="_blank"
+    >Issues? Find me on GitHub</a
+  >
 </span>
 <div class="container">
   <div class="row">
@@ -9,7 +11,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="alert alert-danger" role="alert" *ngIf="error">
+      <div class="alert alert-danger" role="alert" *ngIf="error !== ''">
         <p>{{ error }}</p>
       </div>
     </div>
@@ -18,7 +20,7 @@
     <div class="col-md-2">
       <div class="form-group">
         <label for="inputMode">Input Mode</label>
-        <select class="form-control" id="inputMode" [(ngModel)]="inputMode">
+        <select class="form-select" id="inputMode" [(ngModel)]="inputMode">
           <option [ngValue]="'ascii'">ASCII String</option>
           <option [ngValue]="'hex'">Hex String</option>
         </select>
@@ -35,9 +37,9 @@
           placeholder="ASCII String"
           aria-describedby="btn-addon"
         />
-        <span class="input-group-btn" id="btn-addon">
-          <button class="btn btn-default" type="button" (click)="calculate()">Calculate</button>
-        </span>
+        <button class="btn btn-outline-secondary" type="button" id="button-addon" (click)="calculate()">
+          Calculate
+        </button>
       </div>
     </div>
   </div>
@@ -60,9 +62,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="input-group font-mono">
-        <span class="input-group-addon" id="hex-addon">
-          0x
-        </span>
+        <span class="input-group-text" id="hex-addon"> 0x </span>
         <input
           type="text"
           readonly

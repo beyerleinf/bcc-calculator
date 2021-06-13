@@ -5,3 +5,8 @@
 .font-mono {
   font-family: monospace;
 }
+
+.github-link {
+  margin-left: 8px;
+  margin-top: 8px;
+}
