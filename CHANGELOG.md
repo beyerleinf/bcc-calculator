@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/beyerleinf/bcc-calculator/compare/v1.0.1...v2.0.0) (2021-06-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update to Bootstrap 5
+
+### Features
+
+* Update to Bootstrap 5 ([c9e7cc5](https://github.com/beyerleinf/bcc-calculator/commit/c9e7cc51d57bb13fe9e70c5ebca9483bf49962f0))
+
+
+### Bug Fixes
+
+* upgrade multiple dependencies with Snyk ([9600522](https://github.com/beyerleinf/bcc-calculator/commit/9600522c99da6697a330902bb21fac5561e5a7bd))
+* upgrade rxjs from 6.6.3 to 6.6.7 ([69fd224](https://github.com/beyerleinf/bcc-calculator/commit/69fd2244e2ceddbe1369b00ac584edc9b803de0a))
+* upgrade tslib from 2.1.0 to 2.2.0 ([23be46c](https://github.com/beyerleinf/bcc-calculator/commit/23be46c835d80b73fc4337eb98369f3fc24414d4))
+
 ### [1.0.1](https://github.com/beyerleinf/bcc-calculator/compare/v1.0.0...v1.0.1) (2021-02-13)
 
 
