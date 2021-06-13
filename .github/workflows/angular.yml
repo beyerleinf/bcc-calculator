@@ -1,4 +1,4 @@
-name: Angular Workflow
+name: Angular
 on:
   push:
     branches:
