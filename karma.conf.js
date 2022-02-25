@@ -8,7 +8,6 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-firefox-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-spec-reporter'),
       require('karma-coverage'),
@@ -37,7 +36,6 @@ module.exports = function (config) {
       failFast: true,
     },
     specTimeReporter: {
-      showBrowserId: true,
       showLongestSpec: true,
       enableThresholds: true,
       max: 500,
