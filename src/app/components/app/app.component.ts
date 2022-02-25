@@ -11,13 +11,14 @@ export class AppComponent {
   error = '';
 
   calculate() {
+    this.error = '';
+
     if (this.inputMode === 'ascii') {
       if (Ascii.validate(this.asciiString)) {
         const bytes = Ascii.asciiToByteArray(this.asciiString);
         const bccResult = Bcc.calculate(bytes);
         this.bccVal = Hex.toHexString([bccResult], true) || '';
         this.bccBinary = bccResult.toString(2);
-        this.error = '';
       } else {
         this.error = 'You did not enter a valid ASCII string.';
       }
@@ -27,7 +28,6 @@ export class AppComponent {
         const bccResult = Bcc.calculate(splitHexString);
         this.bccVal = Hex.toHexString([bccResult], true) || '';
         this.bccBinary = bccResult.toString(2);
-        this.error = '';
       } else {
         this.error = 'You did not enter a valid hex string.';
       }
