@@ -23,20 +23,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm chache
+      - name: npm cache
         uses: actions/cache@v1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install
-        uses: ianwalter/puppeteer@3.0.0
-        with:
-          args: npm install
-      - name: Test
-        uses: ianwalter/puppeteer@3.0.0
-        with:
-          args: npm test
-      - name: Build
-        run: npm run build:prod
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:prod
+      - run: npm run lint
