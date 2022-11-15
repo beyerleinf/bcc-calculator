@@ -17,10 +17,17 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets", "src/favicon.ico"],
-            "styles": ["src/styles.css"],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["node-bcc"]
+            "allowedCommonJsDependencies": [
+              "node-bcc"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,20 +94,27 @@
             "tsConfig": "src/tsconfig.spec.json",
             "codeCoverage": true,
             "scripts": [],
-            "styles": ["src/styles.css"],
-            "assets": ["src/assets", "src/favicon.ico"]
+            "styles": [
+              "src/styles.css"
+            ],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "bcc",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
